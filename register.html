@@ -1,13 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Register</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <h3>ลงทะเบียน</h3>
+
+</head>
+
+<body style="background-color: #E3F2FD;">
+
+    <!--Menu-->
+    <div id="menu-container"></div>
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            
+            <div class="col-12 col-md-8 col-lg-6">
+                
+                <div class="card border-0 shadow-sm bg-light rounded-4 p-4 p-md-5">
+                    
+                    <h3 class="text-center text-primary fw-bold mb-4">Register</h3>
+                    
+                    <form id="form1" action="#">
+                        
+                        <div class="mb-3">
+                            <label for="firstname-lastname" class="form-label text-secondary">Firstname - Lastname</label>
+                            <input type="text" class="form-control" id="firstname-lastname" placeholder="firstname - lastname" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="email" class="form-label text-secondary">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="textDetail" class="form-label text-secondary">Address</label>
+                            <textarea class="form-control" id="textDetail" rows="3" placeholder="address" required></textarea>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="Username" class="form-label text-secondary">Username</label>
+                            <input type="text" class="form-control" id="Username" placeholder="Username" required>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="Password" class="form-label text-secondary">Password</label>
+                            <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center gap-2 mt-4">
+                            <button type="submit" id="submit" class="btn btn-primary px-4">Submit</button>
+                            <button type="reset" id="reset" class="btn btn-secondary px-4">Cancel</button>
+                        </div>
+                        
+                    </form>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
     
 </body>
 </html>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/menu.js"></script>

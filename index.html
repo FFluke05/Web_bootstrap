@@ -1,123 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDEX</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+  <style>
+    .product-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .product-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-top: 15px;
+      margin-bottom: 8px;
+    }
+
+    .custom-carousel {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-img {
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+      filter: brightness(0.9);
+    }
+
+    .carousel-indicators [data-bs-target] {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 6px;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+
+    .carousel-indicators .active {
+      background-color: #fff;
+      transform: scale(1.3);
+    }
+  </style>
+
+
 </head>
-<body>
-<!--Menu-->
 
-    <div id="menu-container"></div>
-   
+<body style="background-color: #E3F2FD">
 
-    
-    <div class="container">
-        <h3 class="alert alert-success mt-4 text-center">หน้าหลัก</h3>
-        <div class="alert alert-primary text-center" role="alert">
-           Patipan Phodee
+  <!--Menu-->
+  <div id="menu-container"></div>
+
+  <div class="container py-3">
+    <div id="carouselExampleIndicators" class="carousel slide custom-carousel" data-bs-ride="carousel">
+
+      <div class="carousel-indicators mb-4">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- สไลด์ที่ 1 -->
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="Img1/images5.jpg" class="carousel-img" alt="เสือโคร่ง 1">
         </div>
-        <div class="text-end mb-4">
-            <a class="btn btn-outline-info" href="https://www.google.com/webhp?hl=en&sa=X&ved=2ahUKEwiFiIrc89iWAxU7cWwGHczfEqAQPHoECAYQBA">Google</a>
+        <!-- สไลด์ที่ 2 -->
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="Img1/images4.jpg" class="carousel-img" alt="เสือโคร่ง 2">
         </div>
-    </div>
-
-    <div class="container text-center">
-        <div class="row">
-          <div class="col-sm-4 alert alert-dark">
-            <img src="Img1/images2.jpg" width="200px">
-            <br><br>
-            <h4>เสือโคร่งไซบีเรีย</h4>
-          </div>
-          <div class="col-sm-4 alert alert-light">
-            <img  src="Img1/images3.jpg" width="210px" height="auto">
-            <br><br>
-            <h4>เสือสาว</h4>
-          </div>
-          
-          <div class="col-sm-4 alert alert-secondary">
-           <h4 class="mt-4">Register</h4>
-
-           <form class="text-start ">
-
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Fritname</label>
-              <input type="text" class="form-control" id="Fritname" required placeholder="Fritname">
-            </div>
-
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Lastname</label>
-                <input type="text" class="form-control" id="Lastname" required required placeholder="Lastname">
-            </div>
-        
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Telephone</label>
-                <input type="tel" class="form-control" id="phone"  required required placeholder="ex. xxx-xxx-xxxx">
-            </div>
-
-        <div class="mb-3">
-            <label class="form-label">Province</label>
-            <select class="form-select " id="Province" required>
-                
-                <option selected>เลือกจังวัด</option>
-                <option value="1">สระแก้ว</option>
-                <option value="2">ชลบุรี</option>
-                <option value="3">ระยอง</option>
-              </select>
-        </div>
-
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="e-mail"  required  required required placeholder="e-mail">
-            </div>
-
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="pw" required required required placeholder="password">
-            </div>
-
-            <!-- <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div> -->
-
-            <div class="text-center mb-4">  
-                <button type="submit" class="btn btn btn-danger">Submit</button>
-                <button type="submit" class="btn btn btn-danger">Cancel</button>
-            </div>
-
-
-          
-          </form>
-          </div>
+        <!-- สไลด์ที่ 3 -->
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="Img1/images6.jpg" class="carousel-img" alt="เสือโคร่ง 3">
         </div>
       </div>
-    
-        
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="px-4 py-3 my-5 text-center"> <img class="d-block mx-auto mb-4" src="Img1/images8.svg" alt="" width="72"
+        height="57">
+      <h1 class="display-5 fw-bold text-body-emphasis">Centered hero</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
+          popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
+          prebuilt components, and powerful JavaScript plugins.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> <button type="button"
+            class="btn btn-primary btn-lg px-4 gap-3">Primary button</button> <button type="button"
+            class="btn btn-outline-secondary btn-lg px-4">Secondary</button> </div>
+      </div>
+    </div>
+
+    <div class="container py-5 text-start">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+        <!-- สินค้าชิ้นที่ 1 -->
+        <div class="col">
+          <img src="Img1/images1.jpg" class="product-img img-fluid rounded shadow-sm" alt="เสือโคร่งไซบีเรีย">
+          <h4 class="product-title">เสือโคร่งไซบีเรีย</h4>
+          <p>ราคา <span class="text-danger">900,000</span> บาท</p>
+          <a class="btn btn-outline-warning btn-sm px-4" href="#" role="button">
+            <i class="bi bi-handbag-fill me-1"></i> Add
+          </a>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 2 -->
+        <div class="col">
+          <img src="Img1/images3.jpg" class="product-img img-fluid rounded shadow-sm" alt="เสือโคร่งเบงกอล">
+          <h4 class="product-title">เสือโคร่งเบงกอล</h4>
+          <p>ราคา <span class="text-danger">200,000</span> บาท</p>
+          <a class="btn btn-outline-warning btn-sm px-4" href="#" role="button">
+            <i class="bi bi-handbag-fill me-1"></i> Add
+          </a>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 3 -->
+        <div class="col">
+          <img src="Img1/images5.jpg" class="product-img img-fluid rounded shadow-sm" alt="เสือขาว">
+          <h4 class="product-title">เสือขาว</h4>
+          <p>ราคา <span class="text-danger">500,000</span> บาท</p>
+          <a class="btn btn-outline-warning btn-sm px-4" href="#" role="button">
+            <i class="bi bi-handbag-fill me-1"></i> Add
+          </a>
+        </div>
+
+        <!-- สินค้าชิ้นที่ 4 -->
+        <div class="col">
+          <img src="Img1/images7.jpg" class="product-img img-fluid rounded shadow-sm" alt="เสือโคร่งสุมาตรา">
+          <h4 class="product-title">เสือโคร่งสุมาตรา</h4>
+          <p>ราคา <span class="text-danger">700,000</span> บาท</p>
+          <a class="btn btn-outline-warning btn-sm px-4" href="#" role="button">
+            <i class="bi bi-handbag-fill me-1"></i> Add
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="container px-4 py-5" id="featured-3">
+      <h2 class="pb-2 border-bottom">Columns with icons</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="feature col">
+          <div
+            class="feature-icon bi d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+              <use xlink:href="#collection"></use>
+            </svg>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
+            probably just keep going until we run out of words.</p> <a href="#" class="icon-link">
+            Call to action
+            <svg class="bi" aria-hidden="true">
+              <use xlink:href="#chevron-right"></use>
+            </svg> </a>
+        </div>
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+              <use xlink:href="#people-circle"></use>
+            </svg>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
+            probably just keep going until we run out of words.</p> <a href="#" class="icon-link">
+            Call to action
+            <svg class="bi" aria-hidden="true">
+              <use xlink:href="#chevron-right"></use>
+            </svg> </a>
+        </div>
+        <div class="feature col">
+          <div
+            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+            <svg class="bi" width="1em" height="1em" aria-hidden="true">
+              <use xlink:href="#toggles2"></use>
+            </svg>
+          </div>
+          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
+          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
+            probably just keep going until we run out of words.</p> <a href="#" class="icon-link">
+            Call to action
+            <svg class="bi" aria-hidden="true">
+              <use xlink:href="#chevron-right"></use>
+            </svg> </a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container my-5">
+      <div class="row g-4 align-items-stretch">
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="Img1/images1.jpg" class="card-img-top w-100" alt="เสือโคร่งไซบีเรีย"
+              style="height: 280px; object-fit: cover;">
+            <div class="card-body text-center bg-dark text-white rounded-bottom">
+              <h4 class="card-title mb-0 mt-2">เสือโคร่งไซบีเรีย</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="Img1/images2.jpg" class="card-img-top w-100" alt="เสือสาว"
+              style="height: 280px; object-fit: cover;">
+            <div class="card-body text-center bg-light rounded-bottom">
+              <h4 class="card-title mb-0 mt-2 text-dark">เสือสาว</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm border-0 bg-white">
+            <div class="card-body">
+              <h4 class="card-title text-center mb-4 mt-2">Register</h4>
+
+              <form class="text-start">
+                <div class="mb-3">
+                  <label for="Firstname" class="form-label">Firstname</label>
+                  <input type="text" class="form-control" id="Firstname" required placeholder="Firstname">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Lastname" class="form-label">Lastname</label>
+                  <input type="text" class="form-control" id="Lastname" required placeholder="Lastname">
+                </div>
+
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Telephone</label>
+                  <input type="tel" class="form-control" id="phone" required placeholder="ex. xxx-xxx-xxxx">
+                </div>
+
+                <div class="mb-3">
+                  <label for="Province" class="form-label">Province</label>
+                  <select class="form-select" id="Province" required>
+                    <option value="" selected disabled>เลือกจังหวัด</option>
+                    <option value="1">สระแก้ว</option>
+                    <option value="2">ชลบุรี</option>
+                    <option value="3">ระยอง</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="e-mail" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="e-mail" required placeholder="e-mail">
+                </div>
+
+                <div class="mb-4">
+                  <label for="pw" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="pw" required placeholder="password">
+                </div>
+
+                <div class="d-flex justify-content-center gap-2 mb-2">
+                  <button type="submit" class="btn btn-primary px-4">Submit</button>
+                  <button type="reset" class="btn btn-secondary px-4">Cancel</button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
 
 </body>
+
 </html>
 
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/menu.js"></script>
 
 <script>
-       // โหลด menu.js
-    fetch("menu.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("menu-container").innerHTML = data;
+  // โหลด menu.js
+  fetch("menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu-container").innerHTML = data;
 
-            // ✅ re-bind toggle หลังจากเมนูถูก inject
-            const sidebarToggle = document.body.querySelector('#sidebarToggle');
-            if (sidebarToggle) {
-                sidebarToggle.addEventListener('click', event => {
-                    event.preventDefault();
-                    document.body.classList.toggle('sb-sidenav-toggled');
-                });
-            }
+      // ✅ re-bind toggle หลังจากเมนูถูก inject
+      const sidebarToggle = document.body.querySelector('#sidebarToggle');
+      if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', event => {
+          event.preventDefault();
+          document.body.classList.toggle('sb-sidenav-toggled');
         });
+      }
+    });
 
 </script>
