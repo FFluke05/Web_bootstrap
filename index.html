@@ -50,6 +50,55 @@
       background-color: #fff;
       transform: scale(1.3);
     }
+
+    /* ตกแต่งกล่องข้อความให้มีมิติ */
+    .feature-box {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      /* เงาบางๆ พื้นฐาน */
+      transition: all 0.3s ease;
+      /* ทำให้เอนิเมชันนุ่มนวล */
+      height: 100%;
+    }
+
+    /* เอฟเฟกต์เมื่อนำเมาส์ไปชี้ (Hover) */
+    .feature-box:hover {
+      transform: translateY(-8px);
+      /* ลอยขึ้น */
+      box-shadow: 0 15px 30px rgba(0, 100, 255, 0.15);
+      /* เงาเข้มและกว้างขึ้น มีสีฟ้านิดๆ */
+    }
+
+    /* ตกแต่งกล่องใส่ไอคอน */
+    .icon-wrapper {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      /* ขนาดไอคอน */
+      margin-bottom: 1.25rem;
+    }
+
+    /* ลูกเล่นให้ลิงก์ Call to action */
+    .action-link {
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      transition: gap 0.3s ease;
+      gap: 4px;
+      /* ระยะห่างข้อความกับลูกศร */
+    }
+
+    .action-link:hover {
+      gap: 10px;
+      /* ลูกศรเลื่อนออกเมื่อชี้เมาส์ */
+    }
   </style>
 
 
@@ -165,53 +214,59 @@
 
 
     <div class="container px-4 py-5" id="featured-3">
-      <h2 class="pb-2 border-bottom">Columns with icons</h2>
+      <!-- หัวข้อหลัก -->
+      <h2 class="pb-2 border-bottom fw-bold text-dark">Columns with icons</h2>
+
       <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div class="feature col">
-          <div
-            class="feature-icon bi d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em" aria-hidden="true">
-              <use xlink:href="#collection"></use>
-            </svg>
+
+        <!-- คอลัมน์ที่ 1 -->
+        <div class="col">
+          <div class="feature-box">
+            <!-- ใช้คลาส bi bi-... สำหรับไอคอน และ bg-gradient ให้สีดูมีมิติไล่ระดับ -->
+            <div class="icon-wrapper bg-primary bg-gradient text-white">
+              <i class="bi bi-collection"></i>
+            </div>
+            <h3 class="fs-4 fw-bold text-body-emphasis">Featured title</h3>
+            <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+              another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="action-link text-primary">
+              Call to action <i class="bi bi-chevron-right"></i>
+            </a>
           </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
-            probably just keep going until we run out of words.</p> <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi" aria-hidden="true">
-              <use xlink:href="#chevron-right"></use>
-            </svg> </a>
         </div>
-        <div class="feature col">
-          <div
-            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em" aria-hidden="true">
-              <use xlink:href="#people-circle"></use>
-            </svg>
+
+        <!-- คอลัมน์ที่ 2 -->
+        <div class="col">
+          <div class="feature-box">
+            <!-- เปลี่ยนสีไอคอนได้ง่ายๆ เช่น bg-danger (สีแดง) -->
+            <div class="icon-wrapper bg-danger bg-gradient text-white">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <h3 class="fs-4 fw-bold text-body-emphasis">Featured title</h3>
+            <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+              another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="action-link text-danger">
+              Call to action <i class="bi bi-chevron-right"></i>
+            </a>
           </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
-            probably just keep going until we run out of words.</p> <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi" aria-hidden="true">
-              <use xlink:href="#chevron-right"></use>
-            </svg> </a>
         </div>
-        <div class="feature col">
-          <div
-            class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-            <svg class="bi" width="1em" height="1em" aria-hidden="true">
-              <use xlink:href="#toggles2"></use>
-            </svg>
+
+        <!-- คอลัมน์ที่ 3 -->
+        <div class="col">
+          <div class="feature-box">
+            <!-- เปลี่ยนสีไอคอน เช่น bg-success (สีเขียว) -->
+            <div class="icon-wrapper bg-success bg-gradient text-white">
+              <i class="bi bi-sliders"></i>
+            </div>
+            <h3 class="fs-4 fw-bold text-body-emphasis">Featured title</h3>
+            <p class="text-muted">Paragraph of text beneath the heading to explain the heading. We'll add onto it with
+              another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="action-link text-success">
+              Call to action <i class="bi bi-chevron-right"></i>
+            </a>
           </div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and
-            probably just keep going until we run out of words.</p> <a href="#" class="icon-link">
-            Call to action
-            <svg class="bi" aria-hidden="true">
-              <use xlink:href="#chevron-right"></use>
-            </svg> </a>
         </div>
+
       </div>
     </div>
 
@@ -292,6 +347,12 @@
 
       </div>
     </div>
+
+
+
+    <!--footer-->
+    <div id="footer"></div>
+
 
 
 </body>
